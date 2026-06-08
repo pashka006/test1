@@ -1,0 +1,113 @@
+/* --- Variables & Reset --- */
+:root {
+    --color-primary: #0056b3;
+    --color-primary-hover: #004494;
+    --color-bg: #f8f9fa;
+    --color-text: #333;
+    --transition: 0.3s ease;
+}
+
+* { margin: 0; padding: 0; box-sizing: border-box; }
+body { font-family: system-ui, -apple-system, sans-serif; color: var(--color-text); background-color: var(--color-bg); line-height: 1.5; }
+
+/* --- Utils --- */
+.container { width: 100%; max-width: 1280px; margin: 0 auto; padding: 0 16px; }
+.btn { display: inline-block; padding: 14px 28px; border: none; border-radius: 6px; font-size: 16px; font-weight: bold; cursor: pointer; transition: background var(--transition); text-align: center; }
+.btn--primary { background-color: var(--color-primary); color: #fff; }
+.btn--primary:hover { background-color: var(--color-primary-hover); }
+.section { padding: 60px 0; }
+.section__title { text-align: center; font-size: 32px; margin-bottom: 40px; }
+
+/* --- Sticky CTA --- */
+.sticky-cta { position: fixed; bottom: 0; left: 0; width: 100%; background: #fff; box-shadow: 0 -2px 10px rgba(0,0,0,0.1); padding: 12px 0; z-index: 100; transition: transform var(--transition); }
+.sticky-cta__inner { display: flex; justify-content: center; align-items: center; }
+.sticky-cta__text { display: none; font-weight: bold; margin-right: 20px; }
+.sticky-cta--hidden { transform: translateY(100%); }
+
+/* --- Hero & Timer --- */
+.hero { padding: 80px 0 60px; text-align: center; min-height: 80vh; display: flex; align-items: center; justify-content: center; flex-direction: column; }
+.hero__title { font-size: 28px; margin-bottom: 16px; line-height: 1.2; }
+.hero__subtitle { font-size: 18px; margin-bottom: 32px; font-weight: normal; color: #555; }
+.timer { margin-bottom: 32px; padding: 16px; background: #fff; border-radius: 8px; box-shadow: 0 4px 12px rgba(0,0,0,0.05); display: inline-block; }
+.timer__label { font-size: 14px; margin-bottom: 8px; color: #666; }
+.timer__countdown { font-size: 32px; font-weight: bold; color: #d9534f; font-variant-numeric: tabular-nums; }
+
+/* --- Reviews Slider --- */
+.reviews { background-color: #fff; }
+.review-card { background-color: var(--color-bg); padding: 32px 24px; border-radius: 12px; text-align: center; height: auto; }
+.review-card__avatar { width: 80px; height: 80px; border-radius: 50%; object-fit: cover; margin-bottom: 16px; border: 3px solid #fff; box-shadow: 0 4px 10px rgba(0,0,0,0.1); }
+.review-card__name { font-size: 20px; margin-bottom: 12px; }
+.review-card__text { font-size: 15px; color: #555; font-style: italic; }
+.reviews-slider { padding-bottom: 50px; }
+.swiper-pagination-bullet-active { background-color: var(--color-primary); }
+.swiper-button-next, .swiper-button-prev { display: none; color: var(--color-primary); }
+
+/* --- FAQ Accordion --- */
+.faq__list { max-width: 800px; margin: 0 auto; }
+.faq__item { border-bottom: 1px solid #e0e0e0; }
+.faq__question { width: 100%; text-align: left; background: none; border: none; padding: 24px 0; font-size: 18px; font-weight: 600; cursor: pointer; display: flex; justify-content: space-between; align-items: center; color: var(--color-text); transition: color var(--transition); }
+.faq__question:hover { color: var(--color-primary); }
+.faq__icon { font-size: 24px; transition: transform var(--transition); font-weight: normal; }
+
+/* Магия акордеона через CSS Grid */
+.faq__answer-wrapper { display: grid; grid-template-rows: 0fr; transition: grid-template-rows var(--transition); }
+.faq__answer { overflow: hidden; padding-bottom: 0; color: #555; line-height: 1.6; transition: padding var(--transition); }
+
+.faq__item.is-active .faq__answer-wrapper { grid-template-rows: 1fr; }
+.faq__item.is-active .faq__answer { padding-bottom: 24px; }
+.faq__item.is-active .faq__icon { transform: rotate(45deg); color: var(--color-primary); }
+
+/* --- Breakpoints --- */
+@media (min-width: 768px) {
+    .hero__title { font-size: 42px; }
+    .hero__subtitle { font-size: 22px; }
+
+    .sticky-cta { bottom: auto; top: 0; box-shadow: 0 2px 10px rgba(0,0,0,0.1); }
+    .sticky-cta--hidden { transform: translateY(-100%); }
+    .sticky-cta__text { display: block; }
+    .sticky-cta__inner { justify-content: space-between; }
+}
+
+@media (min-width: 1024px) {
+    .swiper-button-next, .swiper-button-prev { display: flex; }
+}
+
+/* --- 5. О нас --- */
+.about__container { display: grid; gap: 40px; align-items: center; }
+.about__image { width: 100%; border-radius: 12px; box-shadow: 0 8px 24px rgba(0,0,0,0.1); }
+.about__title { text-align: left; margin-bottom: 24px; }
+.about__text { margin-bottom: 16px; color: #555; font-size: 16px; line-height: 1.6; }
+
+@media (min-width: 768px) {
+    .about__container { grid-template-columns: 1fr 1fr; }
+}
+
+/* --- 6. Мультишаговая форма --- */
+.lead { background-color: #e9ecef; }
+.lead__container { max-width: 600px; }
+.form { background: #fff; padding: 32px; border-radius: 12px; box-shadow: 0 4px 15px rgba(0,0,0,0.05); }
+
+/* Логика шагов */
+.form__step--hidden { display: none; }
+
+.form__group { margin-bottom: 20px; }
+.form__label { display: block; margin-bottom: 8px; font-weight: 500; font-size: 14px; }
+.form__input { width: 100%; padding: 12px 16px; border: 1px solid #ccc; border-radius: 6px; font-size: 16px; outline: none; transition: border-color var(--transition); }
+.form__input:focus { border-color: var(--color-primary); }
+
+.form__checkbox-group { display: flex; align-items: flex-start; gap: 10px; margin-bottom: 24px; }
+.form__checkbox { margin-top: 4px; cursor: pointer; }
+.form__checkbox-label { font-size: 14px; color: #555; cursor: pointer; }
+
+.form__btn { width: 100%; }
+.form__actions { display: flex; gap: 16px; }
+.form__btn-back { background: #e0e0e0; color: #333; width: 30%; }
+.form__btn-back:hover { background: #d0d0d0; }
+
+/* --- Модальное окно --- */
+.modal { position: fixed; inset: 0; background: rgba(0,0,0,0.6); display: flex; justify-content: center; align-items: center; z-index: 1000; opacity: 1; transition: opacity var(--transition); }
+.modal--hidden { opacity: 0; pointer-events: none; }
+.modal__content { background: #fff; padding: 40px; border-radius: 12px; max-width: 400px; text-align: center; transform: translateY(0); transition: transform var(--transition); }
+.modal--hidden .modal__content { transform: translateY(-20px); }
+.modal__title { font-size: 24px; margin-bottom: 12px; color: #28a745; }
+.modal__text { margin-bottom: 24px; color: #555; }
