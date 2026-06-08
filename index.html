@@ -3,27 +3,34 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>PrimeInvest | Начни зарабатывать на криптоарбитраже</title>
-    <meta name="description" content="Лучший инструмент для криптоарбитража.">
+    <title>PrimeInvest | Платформа для анализа рыночных данных</title>
+    <meta name="description" content="Платформа для анализа рыночных данных и мониторинга активов в реальном времени.">
+    <!-- Подключение Swiper -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+    <!-- Твой CSS файл -->
     <link rel="stylesheet" href="css/style.css">
 </head>
 <body class="page">
 
 <div class="sticky-cta sticky-cta--hidden" id="sticky-cta">
     <div class="container sticky-cta__inner">
-        <span class="sticky-cta__text">Готов начать зарабатывать?</span>
+        <span class="sticky-cta__text">
+    Начните использовать возможности PrimeInvest уже сегодня
+</span>
         <button class="btn btn--primary js-cta-btn">Начать сейчас</button>
     </div>
 </div>
 
-<header class="hero" id="hero">
+<header class="hero fade-in" id="hero">
     <div class="container hero__container">
-        <h1 class="hero__title">Инвестируй с умом: PrimeInvest</h1>
-        <h2 class="hero__subtitle">Надежный алгоритм для криптоарбитража с минимальными рисками.</h2>
+        <h1 class="hero__title">PrimeInvest: Современная инвестиционная платформа</h1>
+        <p class="hero__subtitle">
+            Анализируйте рыночные возможности, следите за динамикой активов
+            и принимайте решения на основе актуальных данных.
+        </p>
 
         <div class="timer">
-            <p class="timer__label">Предложение действует еще:</p>
+            <p class="timer__label">Окно для регистрации закрывается через:</p>
             <div class="timer__countdown" id="timer-display">15:00</div>
         </div>
 
@@ -31,34 +38,34 @@
     </div>
 </header>
 
-<section class="reviews section" id="reviews">
+<section class="reviews section fade-in" id="reviews">
     <div class="container">
-        <h2 class="section__title">Отзывы инвесторов</h2>
+        <h2 class="section__title">Что говорят наши клиенты</h2>
         <div class="swiper reviews-slider">
             <div class="swiper-wrapper">
 
                 <div class="swiper-slide review-card">
-                    <img src="https://via.placeholder.com/80" alt="Фото" class="review-card__avatar" loading="lazy">
-                    <h3 class="review-card__name">Пользователь 1</h3>
-                    <p class="review-card__text">"Отличная платформа, очень быстрый старт."</p>
+                    <img src="img/alexey.jpg" alt="Алексей" class="review-card__avatar" loading="lazy">
+                    <h3 class="review-card__name">Алексей В.</h3>
+                    <p class="review-card__text">"Удобный интерфейс и понятная аналитика. Смог быстро разобраться в платформе и начать пользоваться всеми возможностями сервиса."</p>
                 </div>
 
                 <div class="swiper-slide review-card">
-                    <img src="https://via.placeholder.com/80" alt="Фото" class="review-card__avatar" loading="lazy">
-                    <h3 class="review-card__name">Пользователь 2</h3>
-                    <p class="review-card__text">"Все работает прозрачно. Удобно отслеживать метрики."</p>
+                    <img src="img/maria.jpg" alt="Мария" class="review-card__avatar" loading="lazy">
+                    <h3 class="review-card__name">Мария С.</h3>
+                    <p class="review-card__text">"Понравилась простая регистрация и доступность информации. Всё выглядит аккуратно и работает без лишних сложностей."</p>
                 </div>
 
                 <div class="swiper-slide review-card">
-                    <img src="https://via.placeholder.com/80" alt="Фото" class="review-card__avatar" loading="lazy">
-                    <h3 class="review-card__name">Пользователь 3</h3>
-                    <p class="review-card__text">"Техподдержка на уровне. Помогли разобраться с настройками."</p>
+                    <img src="img/dmitry.jpg" alt="Дмитрий" class="review-card__avatar" loading="lazy">
+                    <h3 class="review-card__name">Дмитрий К.</h3>
+                    <p class="review-card__text">"Платформа работает стабильно, а нужная информация находится буквально в пару кликов."</p>
                 </div>
 
                 <div class="swiper-slide review-card">
-                    <img src="https://via.placeholder.com/80" alt="Фото" class="review-card__avatar" loading="lazy">
-                    <h3 class="review-card__name">Пользователь 4</h3>
-                    <p class="review-card__text">"Результатом доволен, буду продолжать использовать."</p>
+                    <img src="img/elena.jpg" alt="Елена" class="review-card__avatar" loading="lazy">
+                    <h3 class="review-card__name">Елена П.</h3>
+                    <p class="review-card__text">"Хорошее решение для тех, кто хочет следить за рынком через современный и удобный интерфейс."</p>
                 </div>
 
             </div>
@@ -69,96 +76,101 @@
     </div>
 </section>
 
-<section class="faq section" id="faq">
+<section class="faq section fade-in" id="faq">
     <div class="container">
-        <h2 class="section__title">FAQ</h2>
+        <h2 class="section__title">Часто задаваемые вопросы</h2>
         <div class="faq__list">
 
             <div class="faq__item">
-                <button class="faq__question">Вопрос 1 <span class="faq__icon">+</span></button>
+                <button class="faq__question">Как начать пользоваться платформой? <span class="faq__icon">+</span></button>
                 <div class="faq__answer-wrapper">
-                    <div class="faq__answer">Здесь короткий ответ на первый вопрос, чтобы проверить базовую верстку.</div>
+                    <div class="faq__answer">Создайте аккаунт и заполните основные данные. После регистрации вы получите доступ ко всем основным функциям платформы.</div>
                 </div>
             </div>
 
             <div class="faq__item">
-                <button class="faq__question">Вопрос 2 <span class="faq__icon">+</span></button>
+                <button class="faq__question">Нужно ли устанавливать дополнительное ПО? <span class="faq__icon">+</span></button>
                 <div class="faq__answer-wrapper">
-                    <div class="faq__answer">Здесь более длинный ответ на второй вопрос. Очень важно показать, что плавная анимация отрабатывает корректно не только на коротких строках, но и если текста будет на три-четыре строки на мобильном устройстве. Это частая ошибка при верстке аккордеонов.</div>
+                    <div class="faq__answer">Нет. PrimeInvest работает прямо в браузере на компьютере, планшете и смартфоне.</div>
                 </div>
             </div>
 
             <div class="faq__item">
-                <button class="faq__question">Вопрос 3 <span class="faq__icon">+</span></button>
+                <button class="faq__question">Можно ли пользоваться сервисом с мобильного устройства? <span class="faq__icon">+</span></button>
                 <div class="faq__answer-wrapper">
-                    <div class="faq__answer">Ответ на третий вопрос. Все просто и понятно.</div>
+                    <div class="faq__answer">Да. Интерфейс адаптирован для мобильных устройств и поддерживает все основные функции.</div>
                 </div>
             </div>
 
             <div class="faq__item">
-                <button class="faq__question">Вопрос 4 <span class="faq__icon">+</span></button>
+                <button class="faq__question">Как обеспечивается безопасность данных? <span class="faq__icon">+</span></button>
                 <div class="faq__answer-wrapper">
-                    <div class="faq__answer">Ответ на четвертый вопрос.</div>
+                    <div class="faq__answer">Мы используем современные методы защиты данных и безопасные протоколы передачи информации.</div>
                 </div>
             </div>
 
             <div class="faq__item">
-                <button class="faq__question">Вопрос 5 <span class="faq__icon">+</span></button>
+                <button class="faq__question">Есть ли техническая поддержка?<span class="faq__icon">+</span></button>
                 <div class="faq__answer-wrapper">
-                    <div class="faq__answer">Ответ на пятый вопрос. Платформа поддерживает работу 24/7.</div>
+                    <div class="faq__answer">Да. Пользователи могут обратиться в службу поддержки по вопросам работы платформы.</div>
                 </div>
             </div>
 
             <div class="faq__item">
-                <button class="faq__question">Вопрос 6 <span class="faq__icon">+</span></button>
+                <button class="faq__question">Подходит ли платформа новичкам? <span class="faq__icon">+</span></button>
                 <div class="faq__answer-wrapper">
-                    <div class="faq__answer">Ответ на шестой вопрос. Минимальный порог входа описан в документации.</div>
+                    <div class="faq__answer">Да. Интерфейс разработан таким образом, чтобы основные возможности были понятны даже новым пользователям.</div>
                 </div>
             </div>
 
         </div>
     </div>
 </section>
-<!-- 5. Блок "О нас" -->
-<section class="about section" id="about">
+
+<section class="about section fade-in" id="about">
     <div class="container about__container">
-        <img src="https://via.placeholder.com/500x400" alt="Команда PrimeInvest" class="about__image" loading="lazy">
+        <img src="img/logo.png" alt="PrimeInvest" class="about__image" loading="lazy">
         <div class="about__content">
-            <h2 class="section__title about__title">О PrimeInvest</h2>
-            <p class="about__text">Мы — команда финтех-разработчиков и профессиональных трейдеров. Наша цель — сделать сложный криптоарбитраж доступным для каждого. Алгоритм анализирует сотни бирж за миллисекунды, находя связки с гарантированным спредом.</p>
-            <p class="about__text">Безопасность средств и прозрачность операций — наш главный приоритет.</p>
+            <h2 class="section__title about__title">
+                Удобный инструмент для анализа рынка
+            </h2>
+
+            <p class="about__text">
+                PrimeInvest объединяет актуальные данные, инструменты анализа и удобный интерфейс в одной платформе. Мы стремимся сделать работу с рыночной информацией максимально простой и понятной.
+            </p>
+
+            <p class="about__text">
+                Независимо от уровня опыта, пользователи получают доступ к современным инструментам мониторинга и аналитики, которые помогают быстрее ориентироваться в изменениях рынка.
+            </p>
         </div>
     </div>
 </section>
 
-<!-- 6. Мультишаговая форма (Лидогенерация) -->
-<section class="lead section" id="lead">
+<section class="lead section fade-in" id="lead">
     <div class="container lead__container">
-        <h2 class="section__title">Оставьте заявку и начните сегодня</h2>
+        <h2 class="section__title">Оставь заявку и забирай профит</h2>
 
         <form class="form" id="lead-form" novalidate>
-            <!-- Шаг 1 -->
             <div class="form__step form__step--active" id="step-1">
                 <div class="form__group">
-                    <label for="name" class="form__label">Ваше имя</label>
-                    <input type="text" id="name" class="form__input" required minlength="2" placeholder="Иван Иванов">
+                    <label for="name" class="form__label">Твое имя</label>
+                    <input type="text" id="name" class="form__input" required minlength="2" placeholder="Иван">
                 </div>
                 <div class="form__group">
-                    <label for="email" class="form__label">Ваш Email</label>
-                    <input type="email" id="email" class="form__input" required placeholder="example@mail.com">
+                    <label for="email" class="form__label">Твой Email</label>
+                    <input type="email" id="email" class="form__input" required placeholder="crypto@mail.com">
                 </div>
                 <button type="button" class="btn btn--primary form__btn" id="btn-next">Далее</button>
             </div>
 
-            <!-- Шаг 2 (Скрыт по умолчанию) -->
             <div class="form__step form__step--hidden" id="step-2">
                 <div class="form__group">
-                    <label for="phone" class="form__label">Ваш телефон</label>
+                    <label for="phone" class="form__label">Твой телефон (для SMS-кода)</label>
                     <input type="tel" id="phone" class="form__input" required placeholder="+_ (___) ___-__-__">
                 </div>
                 <div class="form__checkbox-group">
                     <input type="checkbox" id="agreement" class="form__checkbox" required>
-                    <label for="agreement" class="form__checkbox-label">Я согласен на обработку персональных данных</label>
+                    <label for="agreement" class="form__checkbox-label">Согласен с правилами сервиса</label>
                 </div>
                 <div class="form__actions">
                     <button type="button" class="btn form__btn-back" id="btn-back">Назад</button>
@@ -169,17 +181,17 @@
     </div>
 </section>
 
-<!-- Модальное окно успеха -->
 <div class="modal modal--hidden" id="success-modal">
     <div class="modal__content">
         <h3 class="modal__title">Заявка принята!</h3>
-        <p class="modal__text">Наш менеджер свяжется с вами в течение 15 минут.</p>
+        <p class="modal__text">Доступ к личному кабинету отправлен на твой email. Проверь папку "Спам", если письмо не пришло в течение минуты.</p>
         <button class="btn btn--primary" id="btn-close-modal">Отлично</button>
     </div>
 </div>
 
-<script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
 <script src="https://unpkg.com/imask"></script>
+<script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+<!-- Твой JS файл -->
 <script src="js/main.js"></script>
 </body>
 </html>
